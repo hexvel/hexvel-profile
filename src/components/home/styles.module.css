@@ -1,0 +1,18 @@
+.homeContainer {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.homeText {
+	color: #e1e1e1;
+	width: 900px;
+	font-size: 36px;
+}
+
+.gif {
+	border-radius: 50%;
+	height: 468px;
+	width: 440px;
+}

@@ -1,0 +1,48 @@
+.teamContainer {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.teamBlock {
+	display: flex;
+	width: 400px;
+	height: 600px;
+	padding: 12px 30px;
+	border-radius: 12px;
+	align-items: center;
+	flex-direction: column;
+	background: rgb(10, 11, 21);
+	justify-content: space-around;
+	box-shadow: 0 1px 18px rgba(106, 2, 180, 0.383);
+}
+
+.teamBlock .photo {
+	display: flex;
+	color: #ffffff;
+	align-items: center;
+	flex-direction: column;
+}
+
+.teamBlock img {
+	height: 240px;
+	border-radius: 50%;
+}
+
+.teamBlock .text {
+	font-family: "Roboto";
+	font-style: italic;
+	color: #9c9c9c;
+}
+
+.teamBlock .btnGoToProfile {
+	border: none;
+	font-size: 18px;
+	color: #ffffff;
+	cursor: pointer;
+	font-weight: 600;
+	border-radius: 4px;
+	padding: 12px 70px;
+	background: var(--violet);
+}

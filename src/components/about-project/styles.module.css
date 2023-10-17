@@ -1,0 +1,32 @@
+.aboutProjectContainer {
+	height: 100vh;
+	display: flex;
+	background: #16171d;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.aboutProjectContainer h1 {
+	font-size: 50px;
+	color: #ffffff;
+}
+
+.textBlock {
+	width: 80%;
+	margin: 10px;
+	padding: 0 18px;
+	border-radius: 12px;
+	background: #1a1b23;
+	color: #e1e1e1;
+	font-size: 24px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.textBlock:nth-child(2) {
+	margin-top: 120px;
+}
+
+span {
+	color: rgb(28, 129, 183);
+}
