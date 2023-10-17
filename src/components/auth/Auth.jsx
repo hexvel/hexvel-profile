@@ -27,7 +27,7 @@ const Auth = () => {
 		}
 
 		await axios
-			.get("http://localhost:5000/api/login", {
+			.get("https://hexvel-profile.onrender.com/api/login", {
 				params: params,
 			})
 			.then(async (res) => {
