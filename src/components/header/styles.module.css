@@ -71,6 +71,23 @@
 	box-shadow: 0 0 14px rgba(216, 47, 211, 0.6);
 }
 
+.header .commandsBtn {
+	border: none;
+	color: #ffffff;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 8px;
+	padding: 10px 24px;
+	cursor: pointer;
+	transition: 0.2s;
+	background: #08dacf;
+}
+
+.header .commandsBtn:hover {
+	transform: scale(102%);
+	box-shadow: 0 0 14px rgba(47, 182, 216, 0.6);
+}
+
 @media screen and (max-width: 987px) {
 	.header {
 		display: none;
