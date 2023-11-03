@@ -46,9 +46,11 @@ const Auth = () => {
           setIsCaptcha(true);
         } else {
           setResultText(userData.message);
-          setTimeout(() => {
-            navigate("/welcome");
-          }, 400);
+          setLogin("");
+          setPassword("");
+          setCaptcha("");
+          localStorage.setItem("is_authorized", true);
+          setTimeout(() => navigate("/welcome"), 400);
           const { data } = await axios.post(
             "http://hexvel-profile.onrender.com/api/login",
             {
@@ -60,11 +62,6 @@ const Auth = () => {
           );
         }
       });
-
-    setLogin("");
-    setPassword("");
-    setCaptcha("");
-    localStorage.setItem("is_authorized", true);
   };
 
   const handleInputData = () => {
