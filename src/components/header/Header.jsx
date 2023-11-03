@@ -36,7 +36,7 @@ const Header = () => {
         </Link>
       ) : (
         <Link to={"/auth"} className={styles.authBtn}>
-          Авторизоваться
+          Подключить
         </Link>
       )}
     </header>

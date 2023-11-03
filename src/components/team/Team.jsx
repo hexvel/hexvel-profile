@@ -5,7 +5,7 @@ import profilePhoto from "./assets/Dima.jpg";
 
 const cardAnimation = {
   hidden: {
-    y: 100,
+    y: -100,
     opacity: 0,
   },
   visible: {
