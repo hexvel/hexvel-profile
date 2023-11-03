@@ -30,9 +30,15 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <Link to={"/auth"} className={styles.authBtn}>
-        Авторизоваться
-      </Link>
+      {localStorage.getItem("is_authorized") ? (
+        <Link to={"/welcome"} className={styles.commandsBtn}>
+          Команды
+        </Link>
+      ) : (
+        <Link to={"/auth"} className={styles.authBtn}>
+          Авторизоваться
+        </Link>
+      )}
     </header>
   );
 };
