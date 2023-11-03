@@ -1,13 +1,15 @@
 .homeContainer {
-	min-height: 100vh;
+	height: auto;
+	padding: 40px 0;
 	display: flex;
+	margin-top: 80px;
 	align-items: center;
 	justify-content: space-around;
 }
 
 .homeText {
 	color: #e1e1e1;
-	width: 900px;
+	width: 70%;
 	font-size: 36px;
 }
 
@@ -15,4 +17,39 @@
 	border-radius: 50%;
 	height: 468px;
 	width: 440px;
+}
+
+@media screen and (max-width: 1362px) {
+	.homeContainer {
+		justify-content: space-evenly;
+	}
+	.homeText {
+		font-size: 30px;
+	}
+
+	.gif {
+		height: 368px;
+		width: 340px;
+	}
+
+	.homeContainer {
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 987px) {
+	.homeContainer {
+		margin-top: 0;
+	}
+}
+
+@media screen and (max-width: 589px) {
+	.homeText {
+		font-size: 18px;
+	}
+
+	.gif {
+		height: 258px;
+		width: 240px;
+	}
 }

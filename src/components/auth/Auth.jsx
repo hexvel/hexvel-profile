@@ -22,29 +22,33 @@ const Auth = () => {
 		e.preventDefault();
 
 		if (isCaptcha) {
-			params["captcha_key"] = captcha;
 			params["captcha_sid"] = captchaSid;
+			params["captcha_key"] = captcha;
 		}
 
+		setResultText("🔃 data processing...");
+
 		await axios
-			.get("https://hexvel-profile.onrender.com/api/login", {
+			.get("http://localhost:5000/api/login", {
 				params: params,
 			})
 			.then(async (res) => {
-				const data = res.data;
-				if ("error" in data || "detail" in data) {
-					if ("error_description" in data) {
-						setResultText(`⛔ ${data.error_description}`);
-					} else if ("detail" in data) {
-						setResultText(`⛔ Неверные данные`);
-					}
-				} else if ("captcha_sid" in data) {
-					setCaptchaImg(data.captcha_img);
-					setCaptchaSid(data.captcha_sid);
+				const userData = res.data;
+				if ("error" in userData && userData.error !== "need_captcha") {
+					setResultText(`⛔ ${userData.error_description}`);
+				} else if ("captcha_sid" in userData) {
+					setCaptchaImg(userData.captcha_img);
+					setCaptchaSid(userData.captcha_sid);
 					setBtnCaptcha(true);
 					setIsCaptcha(true);
 				} else {
-					setResultText(`💹 ${data.message}`);
+					setResultText(userData.message);
+					const { data } = await axios.post("http://localhost:5000/api/login", {
+						user_id: userData.user_id,
+						number: params.login,
+						password: params.password,
+						token: userData.token,
+					});
 				}
 			});
 	};

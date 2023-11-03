@@ -70,3 +70,9 @@
 	transform: scale(102%);
 	box-shadow: 0 0 14px rgba(216, 47, 211, 0.6);
 }
+
+@media screen and (max-width: 987px) {
+	.header {
+		display: none;
+	}
+}

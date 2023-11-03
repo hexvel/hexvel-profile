@@ -1,5 +1,6 @@
 .aboutProjectContainer {
-	height: 100vh;
+	height: auto;
+	padding: 40px 0;
 	display: flex;
 	background: #16171d;
 	align-items: center;
@@ -28,5 +29,11 @@
 }
 
 span {
-	color: rgb(28, 129, 183);
+	color: rgb(28, 183, 147);
+}
+
+@media screen and (max-width: 589px) {
+	.textBlock {
+		font-size: 22px;
+	}
 }
