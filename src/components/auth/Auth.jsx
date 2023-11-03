@@ -15,6 +15,8 @@ const Auth = () => {
   const [isCaptcha, setIsCaptcha] = useState(false);
   const navigate = useNavigate();
 
+  if (localStorage.getItem("is_authorized")) navigate("/welcome");
+
   const params = {
     login: login,
     password: password,
