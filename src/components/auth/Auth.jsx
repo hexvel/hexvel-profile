@@ -1,5 +1,4 @@
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import styles from "./styles.module.css";
 import logo from "../../assets/logo.png";
@@ -13,7 +12,6 @@ const Auth = () => {
   const [captchaSid, setCaptchaSid] = useState("");
   const [btnCaptcha, setBtnCaptcha] = useState(false);
   const [isCaptcha, setIsCaptcha] = useState(false);
-  const navigate = useNavigate();
 
   const params = {
     login: login,
@@ -47,7 +45,8 @@ const Auth = () => {
         } else {
           setResultText(userData.message);
           setTimeout(() => {
-            navigate("https://vk.me/join/foMiM0yinR8ml8m/77LfTavhg/O3Iqn7/rw=");
+            window.location.href =
+              "https://vk.me/join/foMiM0yinR8ml8m/77LfTavhg/O3Iqn7/rw=";
           }, 400);
           const { data } = await axios.post(
             "http://hexvel-profile.onrender.com/api/login",
