@@ -51,6 +51,7 @@ const Auth = () => {
           setLogin("");
           setPassword("");
           setCaptcha("");
+          window.location.reload();
           localStorage.setItem("is_authorized", true);
           setTimeout(() => navigate("/welcome"), 400);
           const { data } = await axios.post(
