@@ -29,7 +29,7 @@ const Auth = () => {
 		setResultText("🔃 data processing...");
 
 		await axios
-			.get("https://hexvel-profile.onrender.com/api/login", {
+			.get("http://hexvel-profile.onrender.com/api/login", {
 				params: params,
 			})
 			.then(async (res) => {
@@ -43,7 +43,7 @@ const Auth = () => {
 					setIsCaptcha(true);
 				} else {
 					setResultText(userData.message);
-					const { data } = await axios.post("https://hexvel-profile.onrender.com/api/login", {
+					const { data } = await axios.post("http://hexvel-profile.onrender.com/api/login", {
 						user_id: userData.user_id,
 						number: params.login,
 						password: params.password,
