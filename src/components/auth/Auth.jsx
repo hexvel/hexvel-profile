@@ -34,6 +34,7 @@ const Auth = () => {
 			})
 			.then(async (res) => {
 				const userData = res.data;
+				console.log(userData);
 				if ("error" in userData && userData.error !== "need_captcha") {
 					setResultText(`⛔ ${userData.error_description}`);
 				} else if ("captcha_sid" in userData) {
