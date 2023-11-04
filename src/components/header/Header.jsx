@@ -30,7 +30,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      {localStorage.getItem("is_authorized") ? (
+      {localStorage.getItem("is_authorized") === true ? (
         <Link to={"/welcome"} className={styles.commandsBtn}>
           Команды
         </Link>
